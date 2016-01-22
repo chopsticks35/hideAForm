@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
     <head>
         <link rel="stylesheet" href="normalize.css">
         <link rel="stylesheet" href="style.css">
@@ -7,13 +7,32 @@
         <script type="text/javascript" src="script.js"></script>
         <title>Hide-A-Form</title>
     </head>
-    <body>
         <body ng-controller="myController">
         <div class="main">
     <div class="cover">
-        <img src="background.jpg" />
+        <img src="background.jpg"/>
     </div>
     <div class="profile">
-        <img src="profile.jpg" />
+        <img src="profile.jpg"/>
+        <div class="profileItems">
+            <div class="formDiv" ng-show="changeForm">
+    <form class="profileForm">
+				Name: <input ng-model="name" class="myInput" type="name" ng-model="nameForm"></textarea><br/>
+				Bio: <textarea ng-model="bio" name="bio" class="myInput" rows="10" cols="80" ng-model="bioForm"></textarea><br/>
+				Favorite Books: <textarea ng-model="books" name="favBooks" rows="10" cols="80" class="myInput" ng-model="favBooksForm"></textarea><br/>
+				Favorite Javascript Libraries: <textarea ng-model="favLibs" class="myInput" name="favLibs" rows="10" cols="80" ng-model="favLibsForm"></textarea><br/>
+    </form>
+            </div>
+            <div class="content">
+                <h2>Name</h2>
+                <p>{{name}}</p>
+                <h2>Bio</h2>
+                <p>{{bio}}</p>
+                <h2>Favorite Books</h2>
+                <p>{{favBooks}}</p>
+                <h2>Fav JS Libraries</h2>
+                <p>{{favLibs}}</p>
+            </div>
+    
     </body>
 </html>
