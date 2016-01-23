@@ -2,10 +2,10 @@ angular.module('myApp', [])
 
 angular.module('myApp')
 	.controller('myController', ['$scope', function($scope) {
-		$scope.name = "Ti"
-		$scope.bio = "Coding Yogini - love and light"
-		$scope.favBooks = "Neal Stephenson"
-		$scope.favLibs = "JQuery"
+		$scope.name = "Ti Wegmeyer"
+		$scope.bio = "...The Coding Yogini.  Live in the Light.  Love with your whole heart.  Be vulnerable.  Be real.  Dare - take risks.  Always take the high ground.  Be the change you wish to see in the world.  Be a love-maker, life-changer.  Love without labels."
+		$scope.favBooks = "David Foster Wallace, Tom Robbins, Alice Walker, Neal Stephenson"
+		$scope.favLibs = "Angular & JQuery"
 		$scope.profileForm = function(event) {
 			$scope.name = $scope.nameForm
 			$scope.bio = $scope.bioForm
@@ -14,16 +14,16 @@ angular.module('myApp')
 		}
         
 		$scope.changeForm = false
-		$scope.button = "Show Form";
-		count = 2
+		$scope.button = "Make Changes to Profile";
+		counter = 2
 		$scope.showForm = function(event) {
 			$scope.changeForm = !$scope.changeForm
-			count += 1
-			if(count % 2 !== 0) {
-				$scope.button = "Hide Form"
+			counter += 1
+			if(counter % 2 !== 0) {
+				$scope.button = "Save Changes to Profile"
 			}
 			else {
-				$scope.button = "Show Form"
+				$scope.button = "Make Changes to Profile"
 			}
 
 		}

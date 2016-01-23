@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
     <head>
+        <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="normalize.css">
         <link rel="stylesheet" href="style.css">
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
@@ -16,13 +17,16 @@
         <img src="profile.jpg"/>
         <div class="profileItems">
             <div class="formDiv" ng-show="changeForm">
-    <form class="profileForm">
-				Name: <input ng-model="name" class="myInput" type="name" ng-model="nameForm"></textarea><br/>
-				Bio: <textarea ng-model="bio" name="bio" class="myInput" rows="10" cols="80" ng-model="bioForm"></textarea><br/>
-				Favorite Books: <textarea ng-model="books" name="favBooks" rows="10" cols="80" class="myInput" ng-model="favBooksForm"></textarea><br/>
-				Favorite Javascript Libraries: <textarea ng-model="favLibs" class="myInput" name="favLibs" rows="10" cols="80" ng-model="favLibsForm"></textarea><br/>
-    </form>
+    <form class="nameForm">
+				<div class="contentHead">Name: </div><input ng-model="name" class="myInput" type="name" ng-model="nameForm"></input><br/><br/>
+                <div class="profileForm">
+				Bio: <textarea ng-model="bio" name="bio" class="myInput" rows="8" cols="50" ng-model="bioForm"></textarea><br/><br/>
+				Favorite Books: <textarea ng-model="favBooks" name="favBooks" rows="8" cols="50" class="myInput" ng-model="favBooksForm"></textarea><br/><br/>
+				Favorite Javascript Libraries:</div> <textarea ng-model="favLibs" class="myInput" name="favLibs" rows="8" cols="50" ng-model="favLibsForm"></textarea><br/><br/>
+       
+                </form>
             </div>
+        <button ng-click="showForm($event)">{{button}}</button>
             <div class="content">
                 <h2>Name</h2>
                 <p>{{name}}</p>

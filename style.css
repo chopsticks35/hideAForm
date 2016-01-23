@@ -1,26 +1,27 @@
 body,
 html {
-    background-color: #ccc; ;
+    background-color: #ccc;
+    font-family: 'Arial';
 }
-.main{
+.main {
     display:block;
     position:relative;
     padding-top: 0%;
     width: 100%;
     margin: auto;
 }
-.cover{
+.cover {
     display:block;
     position:relative;
     height:437px;
     overflow:hidden;
     z-index:1;
 }
-.cover img{
+.cover img {
    max-width:100%;
     z-index:1;
 }
-.profile{
+.profile {
     display:inline-block;
     position:relative;
     border:#d0efff solid 3px;
@@ -30,8 +31,39 @@ html {
     margin: -260px 0 10px 20px;
     z-index:999;
 }
-.profile img{
+.profile img {
     max-width:100%;
     z-index:999;
     float: right;
 }
+
+button {
+    margin-top: 25%;
+}
+
+.formDiv {
+    position: absolute;
+    max-width: 100%;
+    margin-left: 300px; 
+}
+
+.myInput {
+    padding: 10px;
+    
+}
+.contentHead {
+    font-family: monospace;
+    
+}
+
+.content {
+    margin-bottom: 15%;
+    max-width: 100%:
+    font-family: 'Noto Sans';
+    display:inline;
+}
+
+.nameForm {
+    font-family:cursive;
+}
+
