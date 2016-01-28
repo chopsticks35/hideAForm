@@ -2,10 +2,12 @@ angular.module('myApp', [])
 
 angular.module('myApp')
 	.controller('myController', ['$scope', function($scope) {
+        //set form fields
 		$scope.name = "Ti Wegmeyer"
 		$scope.bio = "...The Coding Yogini.  Live in the Light.  Love with your whole heart.  Be vulnerable.  Be real.  Dare - take risks.  Always take the high ground.  Be the change you wish to see in the world.  Be a love-maker, life-changer.  Love without labels."
 		$scope.favBooks = "David Foster Wallace, Tom Robbins, Alice Walker, Neal Stephenson"
 		$scope.favLibs = "Angular & JQuery"
+        //function set form
 		$scope.profileForm = function(event) {
 			$scope.name = $scope.nameForm
 			$scope.bio = $scope.bioForm
@@ -15,6 +17,7 @@ angular.module('myApp')
         
 		$scope.changeForm = false
 		$scope.button = "Make Changes to Profile";
+        //change button 
 		counter = 2
 		$scope.showForm = function(event) {
 			$scope.changeForm = !$scope.changeForm
